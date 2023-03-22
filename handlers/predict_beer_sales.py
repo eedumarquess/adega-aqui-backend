@@ -8,6 +8,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from sklearn.impute import SimpleImputer
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def predict_beer_sales():
     csv_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'Consumo_cerveja.csv')
@@ -29,7 +32,7 @@ def predict_beer_sales():
     regressor = LinearRegression()
     regressor.fit(X_train, y_train)
 
-    api_key = 'NPpY9osG33izUK2WW1ANoLzl1k8hPhUz'
+    api_key = os.getenv("WEATHER_API_KEY")
 
     url = 'http://dataservice.accuweather.com/currentconditions/v1/45881?apikey=' + api_key
 
