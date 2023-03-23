@@ -2,9 +2,9 @@ import json
 from fastapi import APIRouter, Response
 from handlers.predict_beer_sales import predict_beer_sales
 
-router = APIRouter()
+router_predict = APIRouter()
 
-@router.get("/beer_prediction")
+@router_predict.get("/beer_prediction")
 async def send_beer_prediction():
     beer_prediction = predict_beer_sales()
 
