@@ -2,7 +2,7 @@ import json
 from typing import List
 from fastapi import APIRouter, Response
 from handlers.items_stock import create_item, read_items, read_item, update_item, delete_item
-from models.item_model import Item
+from models.item import Item
 
 router_items = APIRouter(prefix="/items")
 

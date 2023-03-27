@@ -5,7 +5,7 @@ from typing import List
 from bson import ObjectId
 
 from common.database import db
-from models.item_model import Item
+from models.item import Item
 
 async def create_item(item: Item = Body(...)) -> Item:
     collection: Collection = db["items"]
