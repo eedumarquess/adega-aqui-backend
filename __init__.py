@@ -1,0 +1,1 @@
+## Arquivo que inicializa a aplicação Flask.

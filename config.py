@@ -1,0 +1,1 @@
+## Arquivo que contém as configurações da aplicação, como as informações do banco de dados e a chave secreta do JWT.
