@@ -1,1 +1,0 @@
-## Arquivo que contém os controladores da blueprint main, como as rotas da página inicial, perfis de usuários, etc.
