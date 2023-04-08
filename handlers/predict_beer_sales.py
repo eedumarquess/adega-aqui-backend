@@ -2,14 +2,18 @@ import pandas as pd
 import numpy as np
 import requests
 import json
+import os
 from datetime import datetime
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from sklearn.impute import SimpleImputer
 
-def predict_sales():
-    df = pd.read_csv('../data/Consumo_cerveja.csv')
+def predict_beer_sales():
+    csv_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'Consumo_cerveja.csv')
+    csv_file = os.path.abspath(csv_file)
+
+    df = pd.read_csv(csv_file)
 
     df['Temperatura Media (C)'] = df['Temperatura Media (C)'].str.replace(',', '.').astype(float)
     df['Temperatura Minima (C)'] = df['Temperatura Minima (C)'].str.replace(',', '.').astype(float)
